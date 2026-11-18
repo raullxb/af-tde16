@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "id": "ZjS7V_M6leQ",
+      "title": "asdasd",
+      "description": "asdasd",
+      "status": "Pendente"
+    },
+    {
+      "id": "BAAa4thROfc",
+      "title": "asdas",
+      "description": "asdasd",
+      "status": "Pendente"
+    },
+    {
+      "id": "xmoVtcK4jCY",
+      "title": "aaaaa",
+      "description": "bbbbb",
+      "status": "Pendente"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
