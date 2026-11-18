@@ -1,17 +1,44 @@
-# React + Vite
+# Gerenciador de Tarefas (TDE-16)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta é uma aplicação front-end desenvolvida em React para gerenciamento de tarefas (CRUD). O projeto consolida o uso de Context API para gerenciamento de estado global e React Router DOM para navegação. Uma API REST fake é simulada utilizando o `json-server`.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologias Utilizadas
+* **React** (via Vite)
+* **React Router DOM** (Navegação dinâmica)
+* **Context API** (Gerenciamento de estado global)
+* **JSON Server** (Simulação de banco de dados/API)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ⚙️ Funcionalidades
+- Listagem de tarefas com status (Pendente/Concluído).
+- Visualização de detalhes da tarefa em rota dedicada (`/task/:id`).
+- Criação de novas tarefas com validação simples de formulário.
+- Edição de título e descrição de tarefas existentes.
+- Exclusão de tarefas.
+- Alternância rápida do status da tarefa.
+- Gerenciamento eficiente de requisições: os dados são buscados na API apenas uma vez na montagem da aplicação.
 
-## React Compiler
+## 🚀 Como rodar o projeto localmente
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Pré-requisitos
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado na sua máquina.
 
-## Expanding the ESLint configuration
+### 2. Instalação
+Clone este repositório e acesse a pasta do projeto:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# af-tde16
+> git clone https://github.com/raullxb/af-tde16.git
+> cd af-tde16
+
+Em seguida, instale as dependências:
+
+> npm install
+
+### 3. Executando a Aplicação
+Para que o projeto funcione corretamente, você precisará rodar o servidor da API (json-server) e o servidor do React (Vite) **ao mesmo tempo, em terminais separados**.
+
+**Terminal 1 (Iniciando a API falsa):**
+> npx json-server --watch db.json --port 3001
+
+**Terminal 2 (Iniciando o Front-end):**
+> npm run dev
+
+Após rodar os dois comandos, acesse a aplicação no seu navegador (geralmente em `http://localhost:5173`).
